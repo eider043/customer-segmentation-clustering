@@ -107,6 +107,10 @@ python main.py
 streamlit run dashboard.py
 ```
 
+## Streamlit
+
+Link: https://customer-segmentation-clustering-d9m3stppjizhmexpftk3ul.streamlit.app/
+
 ## Autor
 **Eider** — Cientifico de Datos  
 [![Fiverr](https://img.shields.io/badge/Fiverr-Contrátame-1DBF73?logo=fiverr)](https://www.fiverr.com/eiderdatadriven)
