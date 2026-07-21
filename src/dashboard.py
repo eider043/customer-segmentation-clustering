@@ -46,7 +46,9 @@ COLORS = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6"]
 # ── Carga de datos ───────────────────────────────────────────────────
 @st.cache_data
 def load():
-    df = pd.read_csv("../data/customers_clustered.csv")
+    import os
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    df = pd.read_csv(os.path.join(base_dir, "data", "customers_clustered.csv"))
     return df
 
 @st.cache_data
@@ -267,7 +269,8 @@ for col, (cluster, (nombre, desc)) in zip(cols, interpretaciones.items()):
 st.header("Capitulo 7 — Comparacion de Algoritmos")
 
 try:
-    metrics_df = pd.read_csv("../outputs/clustering_metrics.csv")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    metrics_df = pd.read_csv(os.path.join(base_dir, "outputs", "clustering_metrics.csv"))
     col1, col2, col3 = st.columns(3)
     for col, metric, better in zip(
         [col1, col2, col3],
